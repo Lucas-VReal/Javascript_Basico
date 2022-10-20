@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Media de Idades </title>
+</head>
+<body>
+
+    <h1> Calcular a Média de Idades </h1>
+
+    <script>
+        function dw (frase){
+            document.write(frase + "<br><br>");
+        };
+
+        var quantidadeFamiliares = parseInt(prompt("Informe a quantidade de familiares"));
+        var idadesDosFamiliares = 0;
+
+        for( var i = 0; i < quantidadeFamiliares; i++){
+            var nomeFamiliar = prompt("Informe o nome do(a) " + (i+1) + "° Familiar");
+            var idadeFamiliar = parseInt(prompt("Informe a idade de " + nomeFamiliar));
+
+            dw(nomeFamiliar + " têm " + idadeFamiliar + " anos");
+
+            idadesDosFamiliares += idadeFamiliar;
+        };
+
+        dw(idadesDosFamiliares);
+
+        dw("A media de idade dos Familiares é " + Math.round((idadesDosFamiliares/quantidadeFamiliares)));
+
+
+
+
+    </script>
+    
+</body>
+</html>

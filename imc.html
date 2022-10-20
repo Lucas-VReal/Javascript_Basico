@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o IMC</title>
+</head>
+<body>
+    <script>
+
+        function mostra(frase){
+            
+            document.write(frase);
+            document.write("<br><br>");
+        }
+
+        function calcularIMC(nome, peso, altura){
+
+            var imc = peso/(altura * altura)
+            var mensagem = "O IMC de " + nome+ " é " + Math.round(imc);
+
+            mostra(mensagem);
+
+            return imc;
+        }
+
+        // var nome = "Flavio";
+        // var peso = 73;
+        // var altura = 1.71;
+
+
+        // calcularIMC(nome, peso, altura);
+
+        // nome = "Amigo";
+        // peso = 68;
+        // altura = 1.72;
+
+        // calcularIMC(nome, peso, altura);
+
+        var nomeInformado = prompt("Informe o seu nome");
+        var alturaInformada = parseFloat(prompt("Informe a sua altura: "));
+        var pesoInformado = parseInt(prompt("Informe o seu peso"));
+
+        var seuImc = calcularIMC(nomeInformado, pesoInformado, alturaInformada);
+
+        if(seuImc < 18.5){
+            mostra(nomeInformado + ", o seu IMC está abaixo da média");
+        } else if(seuImc >= 18.5 && seuImc <= 35){
+            mostra(nomeInformado + ', parabéns o seu IMC está dentro da média');
+        } else {
+            mostra(nomeInformado + ", o seu IMC está acima da média");
+        };
+        
+
+
+    </script>
+</body>
+</html>

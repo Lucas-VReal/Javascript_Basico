@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos da Copa</title>
+</head>
+<body>
+    <script>
+        function dw(frase){
+            document.write(frase + "<br><br>");
+        };
+
+        var limite = parseInt(prompt("Qual é o ano limite?"));
+
+        var anoCopa = 1930;
+
+        while (limite > anoCopa){
+
+            anoCopa += 4;
+
+            dw("A próxima copa foi em " + anoCopa);
+        };
+
+        alert("Veja as datas")
+    </script>
+
+</body>
+</html>

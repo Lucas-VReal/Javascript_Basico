@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <script>
+
+        function dw (frase){
+            document.write(frase+ "<br><br>");
+        }
+
+        function mostraPontos(vitorias, empates, ano){
+            var frase = "O seu time fez " + (vitorias*3 + empates) + " pontos em " + ano;  
+            document.write(frase + "<br><br>");
+            return vitorias*3 + empates;
+        };
+
+        function definirVitorias(){
+            var vitorias = parseInt(prompt("Digite o número de Vitórias"));
+            return vitorias;
+        }
+
+        function definirEmpates(){
+            var empates = parseInt(prompt("Digite o número de Empates"));
+            return empates;
+        }
+
+        alert("Pontos do ano passado")
+
+        var temporadaPassada = mostraPontos(definirVitorias(), definirEmpates(), 2021);
+
+        alert("Pontos do ano atual")
+
+        var temporadaAtual = mostraPontos(definirVitorias(), definirEmpates(), 2022);
+
+        if(temporadaAtual > temporadaPassada){
+            dw("Seu time está melhor do que no ano passado!");
+        } else if(temporadaAtual == temporadaPassada){
+            dw("Seu time teve o mesmo desempenho da ultima temporada");
+        } else{
+            dw("Seu time está pior do que no ano passado");
+        };
+
+
+    </script>
+
+</body>
+</html>

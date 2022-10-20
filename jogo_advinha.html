@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo-Advinha</title>
+</head>
+<body>
+
+    <script>
+
+
+        var numeroAleatorio = Math.round(Math.random() * 10);
+
+        alert("Vou pensar em um número...");
+
+        alert(" Pronto! Pensei :) ");
+
+        for(var tentativas = 0; tentativas < 3; tentativas++){
+
+            var numeroDigitado = parseInt(prompt("Qual é o número pensado?"));
+
+            if(numeroDigitado == numeroAleatorio){
+                alert("Parabéns, você acertou o número pensado era " + numeroAleatorio);
+                // tentativas += 3;
+                break;
+            }else if (tentativas < 2){
+                alert("Você errou! Tente novamente");
+            }else{
+                alert("Você errou o número pensado era " + numeroAleatorio);
+            }
+        }
+
+        alert("FIM")
+
+
+    </script>
+    
+</body>
+</html>
