@@ -1,6 +1,8 @@
 <meta charset="UTF-8">
 
 <h1>Receitas do Yan</h1>
+<button id="receita">Mostrar Receita</button>
+<h2 id="ingredientes"></h2>
 
 <script>
     var ingredientes = [];
@@ -21,14 +23,21 @@
             if (ingrediente == ingredientes[i]){
                 alert("Ingrediente já utilizado");
                 ingrediente = prompt("Informe o ingrediente " + contador);
+                document.querySelector('#receita').nodeValue = ingrediente++;
             }else{
                 i++;
             }
         }
 
-        ingredientes.push(ingrediente);
+        ingredientes.push(" " + ingrediente);
         contador++;
     }
 
-    console.log(ingredientes);
+    receitaButton = document.querySelector('#receita');
+    ingredientesH2 = document.querySelector('#ingredientes');
+
+    receitaButton.addEventListener("click", (evento) => {
+        ingredientesH2.innerHTML = ingredientes;
+    })
+
 </script>
